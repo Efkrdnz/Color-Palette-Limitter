@@ -45,15 +45,5 @@ npm test
 Efkrdnz
 
 ## License
-
-No open-source license has been selected yet.
-
-Without a license file, the default copyright position is that all rights are reserved by the author. People can view the repository on GitHub, but they do not automatically receive permission to copy, modify, redistribute, or use the project in their own work beyond what GitHub's terms allow for normal site use.
-
-If you want others to freely use, modify, and share the project, add a license file. Common choices:
-
-- MIT: simple and permissive, good if you want broad reuse with attribution.
-- Apache-2.0: permissive like MIT, with extra patent language.
-- GPL-3.0: requires derivative works to use the same license.
-
-If you want to keep full control for now, leave the project unlicensed and keep `UNLICENSED` in `package.json`.
+No Open Source License
+You may fork the project however you like and edit it.
