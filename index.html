@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palette Limit Exporter</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Image palette workspace">
+        <div class="intro">
+          <p class="product-label">Local image palette tool</p>
+          <h1 id="page-title">Limit image colors and export ready-named files.</h1>
+          <p class="intro-copy">Uploads stay in your browser. Output is exported as PNG, with names like <code>photo_lim8.png</code>.</p>
+        </div>
+
+        <form class="control-panel" id="palette-form">
+          <div class="drop-zone" id="drop-zone">
+            <input class="file-input" id="image-input" name="images" type="file" accept="image/*" multiple="multiple">
+            <div class="drop-zone-text">
+              <span class="drop-title">Choose images</span>
+              <span class="drop-hint">or drop files here for bulk processing</span>
+            </div>
+          </div>
+
+          <div class="limit-row">
+            <label for="palette-limit">Color limit</label>
+            <input id="palette-limit" name="palette-limit" type="number" inputmode="numeric" min="1" max="256" step="1" value="8" required>
+          </div>
+
+          <div class="button-row">
+            <button class="button primary" id="process-button" type="submit">Process images</button>
+            <button class="button secondary" id="download-button" type="button" disabled>Download</button>
+          </div>
+
+          <p class="status" id="status" role="status" aria-live="polite">No images selected.</p>
+        </form>
+      </section>
+
+      <section class="results-section" aria-labelledby="results-title">
+        <div class="section-heading">
+          <h2 id="results-title">Results</h2>
+          <p id="results-summary">Processed previews and palettes appear here.</p>
+        </div>
+        <div class="results-grid" id="results-grid">
+          <div class="empty-state">
+            <span class="empty-mark" aria-hidden="true"></span>
+            <p>Select image files, enter a positive whole number, then process.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template id="result-template">
+      <article class="result-card">
+        <div class="preview-wrap">
+          <img class="preview-image" alt="">
+        </div>
+        <div class="result-details">
+          <div class="file-line">
+            <h3 class="file-name"></h3>
+            <span class="file-meta"></span>
+          </div>
+          <div class="palette" aria-label="Generated palette"></div>
+          <p class="result-error" hidden></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

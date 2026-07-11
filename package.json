@@ -1,0 +1,20 @@
+{
+  "name": "color-palette-limitter",
+  "version": "1.0.0",
+  "description": "A local browser tool for limiting image color palettes and exporting PNG results.",
+  "private": true,
+  "author": "Efkrdnz",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Efkrdnz/Color-Palette-Limitter.git"
+  },
+  "scripts": {
+    "start": "node ./tests/serve-static.mjs",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}
